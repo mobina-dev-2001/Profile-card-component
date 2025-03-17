@@ -1,0 +1,128 @@
+:root {
+    --dark-cyan: hsl(185, 75%, 39%);
+    --very-dark-desaturated-blue: hsl(229, 23%, 23%);
+    --dark-grayish-blue: hsl(227, 10%, 46%);
+    --dark-gray: 0, 0%, 59%;
+
+    --ff-primary: "Kumbh Sans", sans-serif;
+
+    --fs-title: 1.125rem;
+    --fs-sub-title: .65rem;
+
+    --fw-400: 400;
+    --fw-700: 700;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  user-select: none;
+}
+
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+ul[role='list'], ol[role='list'] {
+  list-style: none;
+}
+
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+h1, h2, h3, h4, button, input, label {
+  line-height: 1.1;
+}
+
+h1, h2, h3, h4 {
+  text-wrap: balance;
+}
+
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+img, picture {
+  max-width: 100%;
+  display: block;
+}
+
+input, button, textarea, select {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+:target {
+  scroll-margin-block: 5ex;
+}
+
+body {
+    display: grid;
+    place-content: center;
+    background-color: var(--dark-cyan);
+    background-image: url('images/bg-pattern-top.svg'), url('images/bg-pattern-bottom.svg');
+    background-repeat: no-repeat;
+    background-position: -60% 190%, 150% -140%;
+    font-family: var(--ff-primary);
+    line-height: 2.5;
+}
+
+.flex {display: flex; align-items: center;}
+.fc-title {color: var(--very-dark-desaturated-blue);}
+.fc-muted {color: hsl(var(--dark-gray));}
+.fs-title {font-size: var(--fs-title);}
+.fs-sub-title {font-size: var(--fs-sub-title); letter-spacing: 1px;}
+
+.wrapper {
+    width: 350px;
+    background-color: #ffffff;
+    border-radius: 15px;
+}
+
+.images-container {
+  position: relative;
+}
+
+.images-container .background {
+    border-radius: 15px 15px 0 0;
+}
+
+.images-container .avatar {
+  position: absolute;
+  bottom: -40%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 5px solid #ffffff;
+  border-radius: 50%;
+}
+
+.title {
+  margin-block: 4.75rem 1rem;
+  text-align: center;
+}
+
+.title h1 span {
+  margin-left: .4rem;
+  font-weight: var(--fw-400);
+}
+
+.title p {
+  font-size: .85rem;
+}
+
+.details {
+  justify-content: space-around;
+  padding: 1.5rem;
+  border-top: 1px solid hsl(var(--dark-gray), .3);
+  text-align: center;
+}
